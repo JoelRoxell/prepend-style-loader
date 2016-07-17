@@ -15,7 +15,7 @@ Prepends defined style files on import.
   }
 }
 ```
-This will prepend the defined style imports to every file that is matched using `path.resolve`. Perfect to remove tedious variables and mixins imports.
+This will prepend the defined style imports to every file that is matched using `path.resolve`. Perfect to remove tedious variables and mixins imports while using design patters like css-modules or other techniques that isolates scopes.
 
 ## Install
-`npm intsall prepend-style-loader`
+`npm install prepend-style-loader`
