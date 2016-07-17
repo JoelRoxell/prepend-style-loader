@@ -1,6 +1,6 @@
 {
   "name": "prepend-style-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "webpack loader which prepends style files on import.",
   "main": "index.js",
   "scripts": {
