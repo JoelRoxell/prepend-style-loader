@@ -1,0 +1,19 @@
+{
+  "name": "prepend-style-loader",
+  "version": "0.0.0",
+  "description": "webpack loader which prepends style files on import.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelRoxell/prepend-style-loader.git"
+  },
+  "author": "Joel Roxell <joel.roxell@na-kd.com> (https://github.com/JoelRoxell)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoelRoxell/prepend-style-loader/issues"
+  },
+  "homepage": "https://github.com/JoelRoxell/prepend-style-loader#readme"
+}
