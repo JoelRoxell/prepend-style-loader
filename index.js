@@ -1,4 +1,4 @@
-const path = require('path');
+var path = require('path');
 
 module.exports = function(source) {
   if (!this.query) {
@@ -7,12 +7,12 @@ module.exports = function(source) {
 
   this.cacheable();
 
-  let prepend = [],
+  var prepend = [],
     resolve = '',
     args = this.query.split('&');
 
-  for (let i = 0; i < args.length; i++) {
-    let param = args[i].split('='),
+  for (var i = 0; i < args.length; i++) {
+    var param = args[i].split('='),
       key = param[0].replace(/\?/g, '');
 
     switch (key) {
@@ -23,7 +23,7 @@ module.exports = function(source) {
     }
   }
 
-  for (let i = 0; i < prepend.length; i++) {
+  for (var i = 0; i < prepend.length; i++) {
     resolve += `@import '${path.resolve(prepend[i])}'\n`;
   }
 
@@ -37,7 +37,7 @@ module.exports = function(source) {
  *
  * @return {Array<String>}          [description]
  */
-function extractPrependArray(fileStringArray = '') {
+function extractPrependArray(fileStringArray) {
   return fileStringArray
     .replace(/(\[|\])/g, '')
     .split(',')
