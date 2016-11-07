@@ -4,7 +4,8 @@
   "description": "webpack loader which prepends style files on import.",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/mocha/bin/mocha tests/"
+    "test": "node_modules/mocha/bin/mocha tests/",
+    "test:watch": "node_modules/mocha/bin/mocha tests/ --watch"
   },
   "repository": {
     "type": "git",
