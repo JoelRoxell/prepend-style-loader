@@ -1,7 +1,7 @@
-# Style prepender for webpack
+# prepend-style-loader
 [![Build Status](https://travis-ci.org/JoelRoxell/prepend-style-loader.svg?branch=master)](https://travis-ci.org/JoelRoxell/prepend-style-loader)
 
-Prepends defined style files on import.
+Style prepender for webpack, prepends defined style files on import.
 
 ## Usage
 ```javascript
@@ -17,7 +17,7 @@ Prepends defined style files on import.
   }
 }
 ```
-This will prepend the defined style imports to every file that is matched using `path.resolve`. Perfect to remove tedious variables and mixins imports while using design patters like css-modules or other techniques that isolates scopes.
+This will prepend the defined style imports to every file that is matched by the loader. Perfect to remove tedious variables and mixins imports while using design patters like css-modules or other techniques that isolates style scopes.
 
 ## Install
 `npm install prepend-style-loader`
