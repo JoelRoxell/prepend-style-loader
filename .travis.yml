@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - "7"
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+ slack:
+   rooms:
+     secure: clqEgXfbxJY+VhGZuykuPbrD0gS7O+4eBswp/IPjfa4OHRLqauVe+eY66lkPX+CEnL18qPZQnJbuIOoQA7wYjC+0EmUirBoOaMsQ2uZjNzFXHNrZn1A2NLtOJGZq7eEfHjLhVYPpUOTs26kOQvr5q/u6P7kaMlJ307lJSpMrE4Hq9GqWKKNA//IquKWB6f8WS7HfK/aUE98hUBbfxiWJTqxqO3Q9N2/GYMPYDu23rsho56+0G2aw4Jq3VxWD0eQLbwWYMg9o88WlqloEQa26KtGQxr/8T2b4HyQ0zCLtKYIQPH9MCI3NIriC83cfyqlGTjLvOQI8aCwhHvgXX6tF8V0Qq3i/pKCHl6P1Fedv5NGRtDFsCqQlG652EVPDdzlp9FPukNAblhd0H9amzAPBmgYXhzFURBGeAxk6RzRPwRuQKSRiI+bFUJgeBaf+hY1ZD8XUFdzgljImCF6ShzNNOgpFbegpl4/HY/jvgPMk0cHz8e0jkno5pyeAlwWYE60W6eHbhF+Q3j2HLiZ139vP2tR43725sW3r0r984j37fkZeajgeMoN3eJYgEpFA7SEdzKTrtte3u1rJYE9sdHQM8SiDesQVPTqSRc9HaJQmMBgPlZDgmVSOxJTdhP29DD8zSUCDAqH/p6yUm+cDJdq97H6eannn62f6+ieoaB67nhU=
+
+   on_success: change
+
+   on_failure: always

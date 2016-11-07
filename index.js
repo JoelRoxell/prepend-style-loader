@@ -1,8 +1,8 @@
 var path = require('path');
 
-module.exports = function(source) {
+module.exports = function(sourceCode) {
   if (!this.query) {
-    throw new Error('`prepend` parameter must be specified.');
+    throw new Error('Query and `prepend` parameter must be specified.');
   }
 
   this.cacheable();
@@ -24,10 +24,10 @@ module.exports = function(source) {
   }
 
   for (var i = 0; i < prepend.length; i++) {
-    resolve += `@import '${path.resolve(prepend[i])}'\n`;
+    resolve += `@import '${path.resolve(prepend[i])}';\n`;
   }
 
-  return `\n${resolve}\n${source}`;
+  return `\n${resolve}\n${sourceCode}`;
 };
 
 /**

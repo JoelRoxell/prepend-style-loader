@@ -1,4 +1,6 @@
 # Style prepender for webpack
+[![Build Status](https://travis-ci.org/JoelRoxell/prepend-style-loader.svg?branch=master)](https://travis-ci.org/JoelRoxell/prepend-style-loader)
+
 Prepends defined style files on import.
 
 ## Usage
