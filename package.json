@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/JoelRoxell/prepend-style-loader#readme",
   "dependencies": {
+    "loader-utils": "^1.0.2"
+  },
+  "devDependencies" : {
     "chai": "^3.5.0",
     "mocha": "^3.1.2"
   }

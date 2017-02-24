@@ -1,45 +1,14 @@
 var path = require('path');
+var loaderUtils = require('loader-utils');
 
 module.exports = function(sourceCode) {
-  if (!this.query) {
+  var options = loaderUtils.getOptions(this) || [];
+
+  if (!options.prepend.length) {
     throw new Error('Query and `prepend` parameter must be specified.');
   }
 
-  this.cacheable();
-
-  var prepend = [],
-    resolve = '',
-    args = this.query.split('&');
-
-  for (var i = 0; i < args.length; i++) {
-    var param = args[i].split('='),
-      key = param[0].replace(/\?/g, '');
-
-    switch (key) {
-      case 'prepend':
-        prepend = extractPrependArray(param[1]);
-        break;
-      default:
-    }
-  }
-
-  for (var i = 0; i < prepend.length; i++) {
-    resolve += `@import '${path.resolve(prepend[i])}';\n`;
-  }
-
-  return `\n${resolve}\n${sourceCode}`;
+  return options.prepend.reduce((src, file) => {
+    return `@import '${path.resolve(file)}';\n` + src;
+  }, sourceCode);
 };
-
-/**
- * Extract passed file query array.
- *
- * @param  {String} fileStringArray [description]
- *
- * @return {Array<String>}          [description]
- */
-function extractPrependArray(fileStringArray) {
-  return fileStringArray
-    .replace(/(\[|\])/g, '')
-    .split(',')
-    .map(a => a.trim());
-}
