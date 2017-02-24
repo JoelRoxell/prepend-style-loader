@@ -1,7 +1,7 @@
 # prepend-style-loader
 [![Build Status](https://travis-ci.org/JoelRoxell/prepend-style-loader.svg?branch=master)](https://travis-ci.org/JoelRoxell/prepend-style-loader)
 
-> Stylus import prepender for webpack, prepends defined style files on import.
+> Stylus import prepender for webpack, prepends defined style files on build.
 
 This will prepend the defined files to every file that is matched by the loader. Perfect to remove tedious variables and mixins imports while using design patters like css-modules or other techniques that isolates style scopes.
 
