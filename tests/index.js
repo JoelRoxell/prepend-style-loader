@@ -7,13 +7,12 @@ describe('Prepend style loader', function() {
     const fileContent = prependStyleLoader.call(
       {
           cacheaible: function() {},
-          query: '?prepend[]=tests/src/resources/global/variables&prepend[]=tests/src/resources/global/mixins'
+          query: '?prepend[]=./tests/src/resources/global/variables&prepend[]=./tests/src/resources/global/mixins'
       }
       , '.wrapper { color: red; }');
 
-
     expect(fileContent).to.contain(`.wrapper { color: red; }`);
-    expect(fileContent).to.contain(`@import '${__dirname}/src/resources/global/mixins';`);
-    expect(fileContent).to.contain(`@import '${__dirname}/src/resources/global/variables';`);
+    expect(fileContent).to.contain(`@import './tests/src/resources/global/mixins';`);
+    expect(fileContent).to.contain(`@import './tests/src/resources/global/variables';`);
   });
 });

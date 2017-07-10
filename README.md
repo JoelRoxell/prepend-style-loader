@@ -1,7 +1,7 @@
 # prepend-style-loader
 [![Build Status](https://travis-ci.org/JoelRoxell/prepend-style-loader.svg?branch=master)](https://travis-ci.org/JoelRoxell/prepend-style-loader)
 
-> Stylus import prepender for webpack, prepends defined style files on build.
+> Style import prepender for webpack, prepends defined style files on build(scss, stylus, css).
 
 This will prepend the defined files to every file that is matched by the loader. Perfect to remove tedious variables and mixins imports while using design patters like css-modules or other techniques that isolates style scopes.
 
@@ -11,6 +11,9 @@ The example below will import `variable.styl` and `mixnin.styl` and prepend impo
 `npm install prepend-style-loader`
 
 ## Usage
+### Example config
+[here](demo/config.webpack.js)
+
 ### Config
 ```javascript
 {
@@ -47,3 +50,9 @@ The example below will import `variable.styl` and `mixnin.styl` and prepend impo
   }
 }
 ```
+
+## Demo
+Run demo
+`npm npm link prepend-style-loader`
+`yarn demo`
+`open demo/build/index.html`
