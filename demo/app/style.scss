@@ -1,0 +1,6 @@
+.demo {
+  @include actionGradient(to right);
+
+  font-family: $fontFamily;
+  color: $fontColor;
+}

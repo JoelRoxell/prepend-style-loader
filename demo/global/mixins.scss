@@ -1,0 +1,3 @@
+@mixin actionGradient($direction) {
+  background: linear-gradient($direction, #be93c5, #7bc6cc);
+}
