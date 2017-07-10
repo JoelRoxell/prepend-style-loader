@@ -40,8 +40,8 @@ The example below will import `variable.styl` and `mixnin.styl` and prepend impo
             loader: 'prepend-style-loader',
             options: {
               prepend: [
-                'src/resources/global/variables',
-                'src/resources/global/mixins'
+                path.resolve('src/resources/global/variables'),
+                path.resolve('src/resources/global/mixins')
               ]
             }
           }
@@ -53,6 +53,8 @@ The example below will import `variable.styl` and `mixnin.styl` and prepend impo
 
 ## Demo
 Run demo
+`git clone git@github.com:JoelRoxell/prepend-style-loader.git`
+
 `npm link prepend-style-loader`
 
 `yarn demo`
