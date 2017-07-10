@@ -9,6 +9,6 @@ module.exports = function(sourceCode) {
   }
 
   return options.prepend.reduce((src, file) => {
-    return `@import '${path.resolve(file)}';\n` + src;
+    return `@import '${file}';\n` + src;
   }, sourceCode);
 };
