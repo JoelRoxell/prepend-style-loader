@@ -18,7 +18,7 @@ module.exports = function(sourceCode) {
       prepend-style-loader
 
       options
-        prepend: string|[string] - Should either be a single string or an array specifying multiple style files imports.
+        prepend: string|[string] - Should either be a single string or an array specifying multiple style file imports.
     `);
   }
 };
