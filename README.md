@@ -53,6 +53,8 @@ The example below will import `variable.styl` and `mixnin.styl` and prepend impo
 
 ## Demo
 Run demo
-`npm npm link prepend-style-loader`
+`npm link prepend-style-loader`
+
 `yarn demo`
+
 `open demo/build/index.html`
