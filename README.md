@@ -15,6 +15,31 @@ The example below will import `variable.styl` and `mixnin.styl` and prepend impo
 [here](demo/config.webpack.js)
 
 ### Config
+
+Multiple files:
+```javascript
+{
+  loader: 'prepend-style-loader',
+  options: {
+    prepend: [
+      path.resolve('src/resources/global/variables'),
+      path.resolve('src/resources/global/mixins')
+    ]
+  }
+}
+```
+
+Single file:
+```javascript
+{
+  loader: 'prepend-style-loader',
+  options: {
+    prepend: path.resolve('src/resources/global/mixins')
+  }
+}
+```
+
+Styl example
 ```javascript
 {
   rules: {
@@ -47,12 +72,14 @@ The example below will import `variable.styl` and `mixnin.styl` and prepend impo
           }
         ]
       }
+    ]
   }
 }
 ```
 
 ## Demo
 Run demo
+
 `git clone git@github.com:JoelRoxell/prepend-style-loader.git`
 
 `npm link prepend-style-loader`
